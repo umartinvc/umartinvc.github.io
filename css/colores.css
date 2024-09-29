@@ -1,0 +1,103 @@
+.bg-rosa{
+    background-color: #f78ac1
+}
+.bg-titulo{
+    background-color: #fda6d1;
+}
+.bg-cuerpo{
+    background-color: #f8b5d6;
+}
+@media (min-width: 320px) and (max-width: 720px) {
+    .custom-img-size {
+        width: 150px;  /* Ajusta el tamaño para pantallas pequeñas */
+        height: auto;  /* Mantiene la proporción de la imagen */
+    }
+    .panel-img {
+        width: 100%;  /* Hace que la imagen ocupe el 100% del contenedor en pantallas pequeñas */
+        max-width: 300px;  /* Máximo ancho para la imagen */
+    }
+
+}
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050; /* Asegúrate de que el z-index es alto para estar sobre otros elementos */
+}
+
+.popup-card {
+    max-width: 20rem;
+    margin: 0 auto;
+}
+
+/* Fondo general de la página */
+body {
+    background-color: #ffe4e9; /* Rosa suave */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Corazones a lo largo de la página */
+body::before {
+    content: "❤️ ❤️ ❤️";
+    font-size: 5rem;
+    color: #f78ac1;
+    position: fixed;
+    top: 20%;
+    left: 10%;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+body::after {
+    content: "❤️ ❤️ ❤️";
+    font-size: 5rem;
+    color: #f78ac1;
+    position: fixed;
+    bottom: 20%;
+    right: 10%;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+/* Card */
+.card {
+    background-color: #fda6d1; /* Rosa claro */
+    border: 2px solid #f8b5d6; /* Rosa suave */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Texto en la Card */
+.card .card-body {
+    color: #d6336c;
+    text-align: center;
+}
+
+/* Adaptaciones Responsivas */
+@media (min-width: 992px) {
+    .row-cols-lg-3 > .col {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Tamaño de las imágenes dentro de las cards */
+.card-img-top {
+    max-height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
